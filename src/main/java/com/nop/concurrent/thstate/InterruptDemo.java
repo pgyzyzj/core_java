@@ -1,8 +1,8 @@
 package com.nop.concurrent.thstate;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
 
 /**
+ * 当Thread.sleep方法调用的时候，会将当前线程从待执行线程队列中移除。
  * Created by yangzijun on 17-1-13.
  */
 public class InterruptDemo extends Thread{

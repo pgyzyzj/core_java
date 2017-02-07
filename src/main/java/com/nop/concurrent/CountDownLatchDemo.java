@@ -1,6 +1,5 @@
 package com.nop.concurrent;
 
-import java.util.Objects;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.Random;
@@ -47,7 +46,7 @@ public class CountDownLatchDemo {
         executor.submit(processor);
         System.out.println("Submitted tasks. Time to wait...");
         long time = System.currentTimeMillis();
-        testLatch.await(5000, TimeUnit.MILLISECONDS); // bail after a reasonable time
+        testLatch.await(5000, TimeUnit.MILLISECONDS); // fail after a reasonable time
         long totalTime = System.currentTimeMillis() - time;
 
         System.out.println("I awaited for " + totalTime +
