@@ -1,5 +1,9 @@
 package com.nop.concurrent.lock;
 
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * Created by yangzijun on 17-2-16.
  * copied from  <code>java.util.concurrent.Lock.Condition's</code> javadoc
@@ -8,7 +12,7 @@ package com.nop.concurrent.lock;
 public class BoundedBuffer {
     private final Lock lock = new ReentrantLock();
     private final Condition notFull = lock.newCondition();
-    private final Condition notempty = lock.newCondition();
+    private final Condition notEmpty = lock.newCondition();
     final Object[] items = new Object[100];
     int putptr, takeptr, count;
 
