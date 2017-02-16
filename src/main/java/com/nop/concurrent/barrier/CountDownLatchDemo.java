@@ -1,4 +1,4 @@
-package com.nop.concurrent;
+package com.nop.concurrent.barrier;
 
 import java.util.Observable;
 import java.util.Observer;
