@@ -4,8 +4,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 1:这个例子目前还没有得到期望的结果，原因是不能保证会出现两个线程同时运行
- created by yangzijun on 17-2-6.
+ * 1:这个例子目前还没有得到期望的结果，原因是不能保证会出现两个线程同时运行reated by yangzijun on 17-2-6.
  */
 public class VolatileNotSafe {
 
