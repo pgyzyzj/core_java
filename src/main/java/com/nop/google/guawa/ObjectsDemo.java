@@ -1,4 +1,4 @@
-package com.nop.guawa;
+package com.nop.google.guawa;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;

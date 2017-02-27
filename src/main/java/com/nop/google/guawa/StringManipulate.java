@@ -1,4 +1,4 @@
-package com.nop.guawa;
+package com.nop.google.guawa;
 
 import com.google.common.base.CaseFormat;
 import com.google.common.base.CharMatcher;

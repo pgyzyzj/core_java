@@ -1,4 +1,4 @@
-package com.nop.guawa.collection;
+package com.nop.google.guawa.collection;
 
 import com.google.common.collect.*;
 
