@@ -1,5 +1,7 @@
 package com.nop.google.gson.pojo;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 /**
@@ -13,5 +15,6 @@ public class Albums {
     public int total_pages;
     public int page;
     public String limit;
+    @SerializedName("dataset")
     public List<DataSet> dataSet;
 }

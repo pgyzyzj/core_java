@@ -33,6 +33,12 @@ public class DirectUseTypeAdapter {
             this.blue = blue;
         }
 
+        public Rgb(List<String> list){
+            this.red=Integer.parseInt(list.get(0));
+            this.green=Integer.parseInt(list.get(1));
+            this.blue=Integer.parseInt(list.get(2));
+        }
+
         @Override
         public String toString() {
             return MoreObjects.toStringHelper(this).add("red", red).add("green", green).add("blue", blue).toString();
@@ -54,18 +60,23 @@ public class DirectUseTypeAdapter {
             }
 
             public Rgb read(JsonReader reader) throws IOException {
-                if (reader.peek() == JsonToken.NULL) {
+                JsonToken token=reader.peek();
+                if (token == JsonToken.NULL) {
                     reader.nextNull();
                     return null;
                 }
-                String a = reader.nextString();
-                Splitter splitter = Splitter.on(",");
-                List<String> list = Lists.newArrayList(splitter.split(a));
-                return new Rgb(Integer.parseInt(list.get(0)), Integer.parseInt(list.get(1)), Integer.parseInt(list.get(2)));
+                reader.beginObject();
+                System.out.println(reader.nextName());
+                String a=reader.nextString();
+                System.out.println(a);
+                reader.endObject();
+                List<String> list=Lists.newArrayList(Splitter.on(",").split(a));
+                Rgb rgb=new Rgb(list);
+                return rgb;
             }
         });
         Gson gson = gb.create();
-        DirectUseTypeAdapter type = gson.fromJson(json, DirectUseTypeAdapter.class);
+        //DirectUseTypeAdapter type = gson.fromJson(json, DirectUseTypeAdapter.class);
         Rgb rgb=gson.fromJson(json,Rgb.class);
         System.out.println(rgb);
 /*        Rgb rgb1 = new Rgb(111, 211, 33);
