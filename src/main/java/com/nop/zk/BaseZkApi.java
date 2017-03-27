@@ -1,11 +1,7 @@
 package com.nop.zk;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import org.apache.zookeeper.KeeperException;
-import org.apache.zookeeper.WatchedEvent;
-import org.apache.zookeeper.Watcher;
-import org.apache.zookeeper.ZooKeeper;
+import org.apache.zookeeper.*;
 import org.apache.zookeeper.data.Stat;
 
 import java.io.IOException;
@@ -24,6 +20,7 @@ public class BaseZkApi {
                     gson.toJson(watchedEvent,System.out);
                 }
             });
+            zk.create("yzj_001","new".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE,CreateMode.EPHEMERAL);
             Stat stat=new Stat();
             String s=new String(zk.getData("/yzj",false,stat));
             System.out.println(s);

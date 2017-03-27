@@ -2,6 +2,7 @@ package com.nop;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.Random;
 
 /**
  * Hello world!
@@ -17,6 +18,9 @@ public class App
     {
         try {
             getHostName();
+            for(int i=0;i<100;i++){
+                System.out.println(new Random().nextInt(1000));
+            }
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
