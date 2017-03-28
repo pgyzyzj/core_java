@@ -14,8 +14,7 @@ import java.io.IOException;
 public class GetMaxTcpConns {
 
     public static void main(String[] args) {
-        for (int i = 0; i< 2048; i++) {
-            final int s=i;
+        for (int i = 0; i< 3000; i++) {
             try {
                 Thread t = new Thread(new Runnable() {
                     @Override
@@ -41,11 +40,11 @@ public class GetMaxTcpConns {
                     }
                 });
                 t.start();
-            }catch(Exception e){
-                if (e instanceof IllegalStateException){
-                    System.out.println(i);
-                    break;
-                }
+            }catch(Error e){
+                e.printStackTrace();
+                System.out.println(i);
+                break;
+
             }
         }
     }
