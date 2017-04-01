@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * Created by yangzijun on 17-3-28.
- * 模拟启动了１０个客户端连接zk集群，在每个服务端机器上执行echo cons |nc 127.0.0.1 218x ,就可以看到每台服务器上accept到的连接。。从结果可以看出已经是做了负载的，单台机器的负载是比较均匀的，分布为4,4,6
+ * 模拟启动了１０个客户端连接zk集群，在每个上执行echo cons |nc 127.0.0.1 218x ,就可以看到每台服务器上accept到的连接。。从结果可以看出已经是做了负载的，单台机器的负载是比较均匀的，分布为4,4,6
  */
 public class CuratorClient {
     public static void main(String[] args) throws InterruptedException {
