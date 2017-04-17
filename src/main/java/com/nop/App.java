@@ -17,5 +17,8 @@ public class App {
         for (int i = 0; i < 10; ++i) {
             System.out.println(Math.abs("c.jd.id".hashCode()));
         }
+
+        System.out.println(1%2!=0);
+
     }
 }
