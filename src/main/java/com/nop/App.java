@@ -1,8 +1,10 @@
 package com.nop;
 
+import org.apache.commons.beanutils.BeanUtils;
+
+import java.lang.reflect.InvocationTargetException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.util.Random;
 
 /**
  * Hello world!
@@ -13,12 +15,10 @@ public class App {
         System.out.println(new String(InetAddress.getLocalHost().getCanonicalHostName().toString()));
     }
 
-    public static void main(String[] args) {
-        for (int i = 0; i < 10; ++i) {
-            System.out.println(Math.abs("c.jd.id".hashCode()));
-        }
-
-        System.out.println(1%2!=0);
+    public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
 
     }
+
+
+
 }

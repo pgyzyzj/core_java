@@ -80,6 +80,26 @@
             <version>2.9.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>memcached.release</groupId>
+            <artifactId>memcached</artifactId>
+            <version>2.6.3</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.inferred</groupId>
+            <artifactId>freebuilder</artifactId>
+            <version>1.14.1</version>
+            <optional>true</optional>
+        </dependency>
+
     </dependencies>
 
     <build>
