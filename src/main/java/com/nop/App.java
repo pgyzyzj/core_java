@@ -20,5 +20,9 @@ public class App {
 
         System.out.println(1%2!=0);
 
+        System.out.println("促销升级");
+
+
     }
+
 }
