@@ -19,5 +19,6 @@ public class EasyToWrong {
         EasyToWrong easyToWrong=new EasyToWrong();
         Boolean ok=null;
         easyToWrong.setOk(ok);
+        System.out.println("老子改个东西直接把你的冲了");
     }
 }
